@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content }}</p>
+
+            <hr>
+
+            <small>Author: {{ post.author.username }}</small><br>
+            <small>Created: {{ post.created_at }}</small>
+
+            <br><br>
+            <a href="{% url 'postlist' %}" class="btn btn-secondary">
+                Back to Posts
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
